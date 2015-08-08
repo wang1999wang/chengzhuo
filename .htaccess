@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#enables you to access PHP files with HTML extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{QUERY_STRING} ^iid=(d+)$
+#RewriteRule ^$ php-version/index.php [L]
+#RewriteRule ^(.*)\.html$ php-version/$1.php [L]
+#RewriteRule ^(.*)\(.*)\(.*)\(.*)$ /?m=$1&c=$2&a=$3&%1 [L]
+#RewriteRule ^(.*)\(.*)$ index.php [L]
+#RewriteRule ^(.*)\(.*)\(.*)$ index.php?m=$1&c=$2 [L]
+#RewriteRule ^(.*)\(.*)$ /?m=$1&c=$2&%1 [L]
+#RewriteRule ^(.*)$ /?m=$1&%1 [L]
+#RewriteRule ^(.*)$ index.php [L]
+</IfModule>
